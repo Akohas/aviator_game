@@ -17,6 +17,7 @@
     "webpack-dev-server": "^2.7.1"
   },
   "dependencies": {
+    "babel-plugin-transform-class-properties": "^6.24.1",
     "dat.gui": "^0.6.1",
     "three-collada-loader": "0.0.1",
     "three-orbit-controls": "^82.1.0",
