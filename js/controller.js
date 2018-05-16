@@ -1,20 +1,35 @@
-const model = {
-  score : 0
-}
-
+import model from './model';
 
 class Controller {
   constructor(view){
     this.view = view;
-    console.log(this.view)
-    this.view.on('updateScore', this.updateScore);
+
+    
+    this.view.on('incrementScore', this.incrementScore);
+    this.view.on('init', this.setHealth);
+    this.view.on('decrementHealth', this.decrementHealth);
+
+
+    this.setHealth();
   }
 
-  updateScore = () => {
+  incrementScore = () => {
     model.score += 1
-    this.view.updateScoreContainer(model.score)
+    this.view.updateScore(model.score)
   }
 
+  setHealth = () => {
+    console.log('set')
+    this.view.updateHealth(model.health)
+  }
+
+  decrementHealth = () => {
+    if(model.health.current === 1){}
+    else{
+      model.health.current -= 1;
+      this.view.updateHealth(model.health)
+    }
+  }
 }
 
 export default Controller;
