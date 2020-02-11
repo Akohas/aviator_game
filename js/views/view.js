@@ -286,6 +286,10 @@ class View extends EventEmitter {
 
   }
 
+  showGameOverPopup(){
+    
+  }
+
   render = () => {
     requestAnimationFrame(this.render);
     this.renderer.render(this.scene, this.camera);

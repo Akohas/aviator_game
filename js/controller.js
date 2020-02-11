@@ -19,12 +19,15 @@ class Controller {
   }
 
   setHealth = () => {
-    console.log('set')
     this.view.updateHealth(model.health)
   }
 
   decrementHealth = () => {
-    if(model.health.current === 1){}
+    if(model.health.current <= 1){
+      model.health.current = 0;
+      this.view.updateHealth(model.health)
+      this.view.showGameOverPopup()
+    }
     else{
       model.health.current -= 1;
       this.view.updateHealth(model.health)

@@ -1,46 +1,83 @@
 body {
-    margin: 0;
-    overflow: hidden;
+  margin: 0;
+  overflow: hidden;
 }
 
 canvas {
-    width: 100%;
-    height: 100%
+  width: 100%;
+  height: 100%;
 }
 
 #scene {
-    background: linear-gradient(#ffd1a4 0%, #ff9f89 100%);
+  background: linear-gradient(#ffd1a4 0%, #ff9f89 100%);
 }
 
 #score {
-    color: #fff;
-    font-size: 40px;
-    position: absolute;
-    left: 50%;
-    top: 30px;
+  color: #fff;
+  font-size: 40px;
+  position: absolute;
+  left: 50%;
+  top: 30px;
 }
 
 #health {
-    height: 30px;
-    width: 200px;
-    position: absolute;
-    border: 1px solid #d07272;
-    top: 35px;
-    left: 30px;
-    border-radius: 10px;
-    overflow: hidden;
-    background: rgba(255, 0, 0, 0.09);
-    display: flex;
+  height: 30px;
+  width: 200px;
+  position: absolute;
+  border: 1px solid #d07272;
+  top: 35px;
+  left: 30px;
+  border-radius: 10px;
+  overflow: hidden;
+  background: rgba(255, 0, 0, 0.09);
+  display: flex;
 }
 
 .health-item {
-    height: 100%;
-    width: 20px;
-    position: relative;
-    background: #e06a6a;
-    margin-right: 3px;
+  height: 100%;
+  width: 20px;
+  position: relative;
+  background: #e06a6a;
+  margin-right: 3px;
 }
 
 .health-item:last-child {
-    margin-right: 0;
+  margin-right: 0;
+}
+
+.game-over {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(119, 117, 117, 0.71);
+  z-index: 20;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
+}
+
+.game-over__title {
+  font-size: 32px;
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+.game-over__score {
+  font-size: 18px;
+  width: 100%;
+}
+
+.game-over__button {
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-weight: 200;
+  margin-top: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  font-size: 15px;
+  padding: 5px 25px;
 }
